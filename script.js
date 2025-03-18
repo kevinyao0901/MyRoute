@@ -1,5 +1,4 @@
-// 替换为你的 OpenRouteService API Key
-const apiKey = "5b3ce3597851110001cf6248ad98c1b4e675463aac39243dafb40cb2";
+const Unkonwn = "5b3ce3597851110001cf6248ad98c1b4e675463aac39243dafb40cb2";
 
 document.addEventListener("DOMContentLoaded", () => {
   // 初始化 Leaflet 地图
@@ -117,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return fetch(url, {
       method: "POST",
       headers: {
-        "Authorization": apiKey,
+        "Authorization": Unkonwn,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({ coordinates: coords })
@@ -127,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 使用 OpenRouteService 的地理编码 API 获取地点坐标
   function getCoordinatesForPlace(placeName) {
-    const url = `https://api.openrouteservice.org/geocode/search?api_key=${apiKey}&text=${encodeURIComponent(placeName)}&size=1`;
+    const url = `https://api.openrouteservice.org/geocode/search?api_key=${Unkonwn}&text=${encodeURIComponent(placeName)}&size=1`;
     return fetch(url)
       .then(response => response.json())
       .then(data => {
