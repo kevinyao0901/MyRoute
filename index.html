@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>路线规划 App</title>
+  <!-- 引入 Leaflet 样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>路线规划 App</h1>
+  </header>
+  <section id="controls">
+    <div class="input-group">
+      <input type="text" id="placeInput" placeholder="输入地点名称" />
+      <button id="addPlace">添加地点</button>
+    </div>
+    <div class="input-group">
+      <label for="routeMode">路线模式：</label>
+      <select id="routeMode">
+        <option value="driving-car">驾车</option>
+        <option value="foot-walking">步行</option>
+      </select>
+      <button id="calcRoute">规划路线</button>
+    </div>
+    <ul id="placeList"></ul>
+  </section>
+  <section id="map"></section>
+  <section id="results">
+    <h2>路线详情</h2>
+    <div id="directions"></div>
+  </section>
+  <!-- 引入 Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
